@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Znajdź swój poziom siatkówki</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./dist/css/main.min.css">
+</head>
+
+<body>
+  <h1 class="main__h1">Sprawdź jaki masz poziom siatkówki</h1>
+
+  <div class="form">
+
+    <div class="form__box form__box-active" data-number="1"">
+      <h2 class=" form__box-h2">atak
+      </h2>
+      <div class="form__box-radio">
+        <div class="form__box-radio-item">
+          <input type="radio" name="atack-form" value="1" id="atack_1"></input>
+          <label for="atack_1">Nie umiem atakować, po prostu przebijam piłkę
+            na drugą stronę</label>
+        </div>
+        <div class="form__box-radio-item">
+          <input type="radio" name="atack-form" value="2" id="atack_2"></input>
+          <label for="atack_2">Zdarza mi się zaatakować, ale jest to niedokładne i chaotyczne</label>
+        </div>
+        <div class="form__box-radio-item">
+          <input type="radio" name="atack-form" value="3" id="atack_3"></input>
+          <label for="atack_3">Staram się atakować, ale ataki są lekkie i niedokładne</label>
+        </div>
+        <div class="form__box-radio-item">
+          <input type="radio" name="atack-form" value="4" id="atack_4"></input>
+          <label for="atack_4">Atakuję normalnie, niektóre ataki są dość mocne i skuteczne</label>
+        </div>
+        <div class="form__box-radio-item">
+          <input type="radio" name="atack-form" value="5" id="atack_5"></input>
+          <label for="atack_5">Moje ataki są zazwczaj mocne i skuteczne, niektóre są bardzo mocne</label>
+        </div>
+        <div class="form__box-radio-item">
+          <input type="radio" name="atack-form" value="6" id="atack_6"></input>
+          <label for="atack_6">Moje ataki są bardzo mocne, skuteczne i dokładne</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form__box" data-number="2">
+      <h2 class="form__box-h2">rozegranie
+      </h2>
+      <div class="form__box-radio">
+        <div class="form__box-radio-item">
+          <input type="radio" name="setter-form" value="1" id="setter_1"></input>
+          <label for="setter_1">Nie umiem rozgrywać</label>
+        </div>
+        <div class="form__box-radio-item">
+          <input type="radio" name="setter-form" value="2" id="setter_2"></input>
+          <label for="setter_2">Moje rozegranie jest bardzo niedokładne</label>
+        </div>
+        <div class="form__box-radio-item">
+          <input type="radio" name="setter-form" value="3" id="setter_3"></input>
+          <label for="setter_3">Moja wystawa jest dość niedokładna, czasami zdarza się dobrze rozegrać</label>
+        </div>
+        <div class="form__box-radio-item">
+          <input type="radio" name="setter-form" value="4" id="setter_4"></input>
+          <label for="setter_4">Moja rozegranie jest nienajgorsze z dość dobrą dokładnością</label>
+        </div>
+        <div class="form__box-radio-item">
+          <input type="radio" name="setter-form" value="5" id="setter_5"></input>
+          <label for="setter_5">Wystawa jest dość dokładna, rzadko zdarzają się niedociągnięcia</label>
+        </div>
+        <div class="form__box-radio-item">
+          <input type="radio" name="setter-form" value="6" id="setter_6"></input>
+          <label for="setter_6">Bardzo dokładne rozegranie, często perfekcyjne</label>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="form__box" data-number="3">
+      <h2 class="form__box-h2">bloki
+      </h2>
+      <div class="form__box-radio">
+        <div class="form__box-radio-item">
+          <input type="radio" name="block-form" value="1" id="block_1"></input>
+          <label for="block_1">Nie blokuję</label>
+        </div>
+        <div class="form__box-radio-item">
+          <input type="radio" name="block-form" value="2" id="block_2"></input>
+          <label for="block_2">Staram się blokować, ale bardzo rzadko udaje mi się dotknąć atakowanej piłki</label>
+        </div>
+        <div class="form__box-radio-item">
+          <input type="radio" name="block-form" value="3" id="block_3"></input>
+          <label for="block_3">Czasem uda mi się dotknąć atakowaną piłkę z różnym rezultatem</label>
+        </div>
+        <div class="form__box-radio-item">
+          <input type="radio" name="block-form" value="4" id="block_4"></input>
+          <label for="block_4">Blokuję, ale nie zawsze udaje mi się postawić dobry technicznie blok</label>
+        </div>
+        <div class="form__box-radio-item">
+          <input type="radio" name="block-form" value="5" id="block_5"></input>
+          <label for="block_5">Skaczę do bloku dość wysoko, stawiam blok dobrze technicznie, często skutecznie</label>
+        </div>
+        <div class="form__box-radio-item">
+          <input type="radio" name="block-form" value="6" id="block_6"></input>
+          <label for="block_6">Mam dobry technicznie, wysoki blok</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form__box" data-number="4">
+      <h2 class="form__box-h2">odbicia
+      </h2>
+      <div class="form__box-radio">
+        <div class="form__box-radio-item">
+          <input type="radio" name="pass-form" value="1" id="pass_1"></input>
+          <label for="pass_1">Moje odbicia są niedokładne i chaotyczne. Piłka lata gdzie chce</label>
+        </div>
+        <div class="form__box-radio-item">
+          <input type="radio" name="pass-form" value="2" id="pass_2"></input>
+          <label for="pass_2">Odbijam bardzo niedokładnie. Tor lotu jest odpowiedni</label>
+        </div>
+        <div class="form__box-radio-item">
+          <input type="radio" name="pass-form" value="3" id="pass_3"></input>
+          <label for="pass_3">Odbijam dość niedokładnie. Piłka nie upada mi często</label>
+        </div>
+        <div class="form__box-radio-item">
+          <input type="radio" name="pass-form" value="4" id="pass_4"></input>
+          <label for="pass_4">Moje odbicia są raczej dokładne</label>
+        </div>
+        <div class="form__box-radio-item">
+          <input type="radio" name="pass-form" value="5" id="pass_5"></input>
+          <label for="pass_5">W zdecydowanej większośći moje odbicia są dokładne</label>
+        </div>
+        <div class="form__box-radio-item">
+          <input type="radio" name="pass-form" value="6" id="pass_6"></input>
+          <label for="pass_6">Moje odbicia są dokładne, w zadanym torze, kierunku i wysokości</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form__box" data-number="5">
+      <h2 class="form__box-h2">przyjęcie
+      </h2>
+      <div class="form__box-radio">
+        <div class="form__box-radio-item">
+          <input type="radio" name="receive-form" value="1" id="receive_1"></input>
+          <label for="receive_1">Mam bardzo duże problemy z przyjęciem, nawet bardzo łatwego serwisu</label>
+        </div>
+        <div class="form__box-radio-item">
+          <input type="radio" name="receive-form" value="2" id="receive_2"></input>
+          <label for="receive_2">Mam problemy z przyjęciem serwisu, czasami zdarza się odbić piłkę w kierunku
+            rozgrywającego</label>
+        </div>
+        <div class="form__box-radio-item">
+          <input type="radio" name="receive-form" value="3" id="receive_3"></input>
+          <label for="receive_3">Przyjmuję dobrze proste serwisy, czasami nie do końca dokładnie</label>
+        </div>
+        <div class="form__box-radio-item">
+          <input type="radio" name="receive-form" value="4" id="receive_4"></input>
+          <label for="receive_4">Łatwy serwis jest przyjmowany dokładnie, z trudnym bywa problem</label>
+        </div>
+        <div class="form__box-radio-item">
+          <input type="radio" name="receive-form" value="5" id="receive_5"></input>
+          <label for="receive_5">Łatwy serwis nie stanowi problemu, trudny jest przyjmowany dość dobrze</label>
+        </div>
+        <div class="form__box-radio-item">
+          <input type="radio" name="receive-form" value="6" id="receive_6"></input>
+          <label for="receive_6">Większość serwisów przyjmuję dobrze</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form__box" data-number="6">
+      <h2 class="form__box-h2">serwis
+      </h2>
+      <div class="form__box-radio">
+        <div class="form__box-radio-item">
+          <input type="radio" name="serve-form" value="1" id="serve_1"></input>
+          <label for="serve_1">Moje serwisy często nie przechodzą na drugą stronę / serwuję w aut</label>
+        </div>
+        <div class="form__box-radio-item">
+          <input type="radio" name="serve-form" value="2" id="serve_2"></input>
+          <label for="serve_2">Mam problemy z serwisem. Często serwuję w aut / siatkę</label>
+        </div>
+        <div class="form__box-radio-item">
+          <input type="radio" name="serve-form" value="3" id="serve_3"></input>
+          <label for="serve_3">Serwis poprawny, mało dokładny, ale trafiam w boisko. Rzadko sprawiam kłopot
+            obronie</label>
+        </div>
+        <div class="form__box-radio-item">
+          <input type="radio" name="serve-form" value="4" id="serve_4"></input>
+          <label for="serve_4">Serwję poprawnie, umiem zaserwować na konkretną strefę. Mocne serwisy się zdarzają, ale
+            czasami serwuję w aut /siatkę</label>
+        </div>
+        <div class="form__box-radio-item">
+          <input type="radio" name="serve-form" value="5" id="serve_5"></input>
+          <label for="serve_5">Mocne serwisy sprawiające trudności w odbiorze</label>
+        </div>
+        <div class="form__box-radio-item">
+          <input type="radio" name="serve-form" value="6" id="serve_6"></input>
+          <label for="serve_6">Serwuję mocno / bardzo mocno. Moje serwisy są dokładne i dobre technicznie. Sprawiają
+            kłopot w odbiorze</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form__box" data-number="7">
+      <button class="btn form__box-submit-btn">Pokaż wynik</button>
+      <h2 class="form__box-h2 form__box-h2-result">Twój wynik to: <span class="form__box-span"></span>
+      </h2>
+    </div>
+
+  </div>
+
+  <div class="progress__box">
+    <div class="progress__box-bar"></div>
+    <div class="step active-step">1</div>
+    <div class="step">2</div>
+    <div class="step">3</div>
+    <div class="step">4</div>
+    <div class="step">5</div>
+    <div class="step">6</div>
+    <div class="step">7</div>
+  </div>
+
+  <div class="buttons__box">
+    <button class="btn btn__previous" disabled>⬅</button>
+    <button class="btn btn__next">➡</button>
+  </div>
+
+  <script src="./dist/js/main.min.js"></script>
+
+</body>
+
+</html>

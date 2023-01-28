@@ -1,0 +1,204 @@
+@use 'colors' as *;
+@use 'mixin' as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+	font-size: 1.6rem;
+	font-family: 'Montserrat', sans-serif;
+	background-color: $background-color;
+	color: $font-color;
+}
+
+.btn {
+	@include mixinBtn;
+}
+
+.main__h1 {
+	padding-bottom: 2rem;
+	text-transform: uppercase;
+	font-size: 2.5rem;
+	text-align: center;
+}
+
+.form {
+	width: 350px;
+	height: 600px;
+	border: 1px solid $font-color;
+	border-radius: 6px;
+	background-color: $font-color;
+	color: $background-color;
+	margin-bottom: 2rem;
+	overflow: hidden;
+
+	&__box {
+		display: none;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		width: 100%;
+		height: 100%;
+
+		&-active {
+			display: flex;
+		}
+
+		&-h2 {
+			text-transform: uppercase;
+			padding: 2rem;
+			text-decoration: underline;
+
+			&-result {
+				display: none;
+			}
+		}
+
+		&-submit-btn {
+			width: 250px;
+			height: 75px;
+			font-size: 2rem;
+			text-transform: uppercase;
+			color: $font-color;
+			transition: background-color 0.3s, color 0.3s;
+
+			&:hover {
+				background-color: $progress-color-darker;
+				// color: $background-color;
+			}
+		}
+		&-radio {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: space-around;
+			flex-direction: column;
+			font-size: 1.3rem;
+
+			&-item {
+				padding-bottom: 2rem;
+				padding-left: 2rem;
+			}
+		}
+	}
+}
+
+.progress__box {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	width: 350px;
+
+	&::before {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		height: 4px;
+		width: 100%;
+		background-color: $font-color;
+		z-index: -1;
+		content: '';
+	}
+
+	&-bar {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		height: 4px;
+		width: 0%;
+		background-color: $progress-color;
+		z-index: -1;
+		transition: width 0.3s;
+	}
+
+	.step {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 6px;
+		border: 4px solid $border-color;
+		width: 40px;
+		height: 40px;
+		background-color: $font-color;
+		color: $background-color;
+	}
+
+	.active-step {
+		background-color: $progress-color;
+		border: 4px solid $progress-color-darker;
+		transition: background-color 0.3s;
+	}
+}
+
+.buttons__box {
+	margin-top: 2rem;
+	.btn {
+		@include mixinBtn;
+		width: 80px;
+
+		&:disabled {
+			background: $border-color;
+			color: $background-color;
+			cursor: default;
+		}
+	}
+}
+
+@media (min-width: 576px) {
+	.main__h1 {
+		font-size: 3rem;
+	}
+	.form {
+		width: 400px;
+		height: 500px;
+	}
+	.progress__box {
+		width: 400px;
+	}
+}
+
+@media (min-width: 768px) {
+	.main__h1 {
+		font-size: 3.5rem;
+	}
+	.form {
+		width: 600px;
+		height: 350px;
+		margin-bottom: 5rem;
+		&__box {
+			&-radio {
+				font-size: 1.5rem;
+			}
+		}
+	}
+
+	.progress__box {
+		width: 600px;
+		margin-bottom: 3rem;
+	}
+}
+
+@media (min-width: 992px) {
+	.form {
+		width: 800px;
+		height: 350px;
+	}
+	.progress__box {
+		width: 800px;
+	}
+}
